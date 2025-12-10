@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QNAS AR Business Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Marker-based AR visiting card with 3D avatar and QNAS contact details."
+    />
+
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+    <!-- AR.js for marker-based AR -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a-scene
+      embedded
+      vr-mode-ui="enabled: false"
+      renderer="logarithmicDepthBuffer: true; antialias: true"
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+      <!-- Hiro marker -->
+      <a-marker preset="hiro">
+        <!-- BIG avatar, facing forward -->
+
+        <a-image
+            src="assets/tawa.png"
+            width="4.205"
+            height="12"
+          ></a-image>
+
+    
+      </a-marker>
+
+      <!-- Camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

@@ -14,7 +14,7 @@ body {
 }
 
 /* Camera video full screen */
-#camera {
+/* #camera {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -2;
-}
+} */
 
 /* Dark gradient overlay */
 .overlay {

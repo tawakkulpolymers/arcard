@@ -6,7 +6,7 @@
 
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta
       name="description"
@@ -17,6 +17,19 @@
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 
     <!-- AR.js -->
+    <a-scene
+  embedded
+  vr-mode-ui="enabled: false"
+  renderer="antialias: true; precision: mediump;"
+  arjs="
+    sourceType: webcam;
+    debugUIEnabled: false;
+    detectionMode: mono;
+    matrixCodeType: 3x3;
+  "
+>
+
+
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
     <style>
@@ -49,7 +62,11 @@
       </a-marker>
 
       <!-- Camera -->
-      <a-entity camera></a-entity>
+      <a-entity
+  camera
+  look-controls="enabled: false"
+></a-entity>
+
     </a-scene>
   </body>
 </html>

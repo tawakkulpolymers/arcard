@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tawakkul Polymers AR Business Card</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <meta
       name="description"
-      content="Marker-based AR visiting card with 3D avatar and QNAS contact details."
+      content="Marker-based AR visiting card with Tawakkul Polymers branding."
     />
 
     <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 
-    <!-- AR.js for marker-based AR -->
+    <!-- AR.js -->
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 
     <style>
@@ -27,20 +31,21 @@
     <a-scene
       embedded
       vr-mode-ui="enabled: false"
-      renderer="logarithmicDepthBuffer: true; antialias: true"
+      renderer="antialias: true"
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <!-- Hiro marker -->
-      <a-marker preset="kanji" >
-        <!-- BIG avatar, facifi ng forward -->
-
+      <!-- Hiro Marker -->
+      <a-marker preset="hiro">
+        
+        <!-- Business Card Image -->
         <a-image
-            src="assets/tawa.png"
-            width="4.205"
-            height="12"
-          ></a-image>
+          src="assets/tawa.png"
+          position="0 0.01 0"
+          rotation="-90 0 0"
+          width="4"
+          height="2.5"
+        ></a-image>
 
-    s
       </a-marker>
 
       <!-- Camera -->
